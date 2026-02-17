@@ -1,0 +1,238 @@
+:root {
+  --foto: url("foto1.jpeg");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: radial-gradient(circle at top, #ffe6f0, #ffffff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  max-width: 700px;
+}
+
+h1 {
+  font-size: 48px;
+  color: #ff3b86;
+  margin-bottom: 5px;
+  text-shadow: 0px 6px 15px rgba(255, 80, 150, 0.35);
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+/* BOUQUET BASE */
+.bouquet {
+  position: relative;
+  width: 400px;
+  height: 520px;
+  margin: auto;
+  border-radius: 50px;
+  filter: drop-shadow(0px 18px 25px rgba(0,0,0,0.25));
+}
+
+/* WRAPPING PAPER */
+.wrap {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 340px;
+  height: 360px;
+  background: linear-gradient(135deg, #ffd1e6, #ff9cc8);
+  border-radius: 40% 40% 60% 60%;
+  z-index: 1;
+  box-shadow: inset 0px 0px 30px rgba(255,255,255,0.4);
+}
+
+.wrap2 {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 320px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.7), rgba(255,210,230,0.5));
+  border-radius: 45% 45% 60% 60%;
+  z-index: 2;
+  border: 2px solid rgba(255,255,255,0.8);
+}
+
+/* MAIN PHOTO */
+.photo-frame {
+  position: absolute;
+  top: 190px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  border: 10px solid white;
+  box-shadow: 0px 12px 30px rgba(0,0,0,0.25);
+  overflow: hidden;
+  z-index: 10;
+  background: white;
+}
+
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* FLOWER */
+.flower {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  z-index: 8;
+}
+
+/* PETAL (Pakai foto cewek) */
+.petal {
+  position: absolute;
+  width: 75px;
+  height: 110px;
+  background-image: var(--foto);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border-radius: 60% 60% 85% 85%;
+  border: 3px solid #ff3b86;
+
+  box-shadow: 0px 8px 18px rgba(0,0,0,0.25);
+  filter: brightness(1.08) contrast(1.1);
+  opacity: 0.95;
+
+  transform-origin: bottom center;
+}
+
+/* PETAL POSITIONS */
+.p1 { top: 5px; left: 40px; transform: rotate(0deg); }
+.p2 { top: 15px; left: 5px; transform: rotate(-50deg); }
+.p3 { top: 45px; left: -10px; transform: rotate(-95deg); }
+.p4 { top: 15px; right: 5px; transform: rotate(50deg); }
+.p5 { top: 45px; right: -10px; transform: rotate(95deg); }
+
+/* FLOWER CENTER */
+.center {
+  position: absolute;
+  top: 55px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(circle, #ffd56b, #ff8f45);
+  border-radius: 50%;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.25);
+  z-index: 20;
+}
+
+/* FLOWER PLACEMENT */
+.flower1 { top: 40px; left: 40px; transform: rotate(-10deg); }
+.flower2 { top: 10px; left: 125px; transform: rotate(5deg); }
+.flower3 { top: 40px; right: 40px; transform: rotate(12deg); }
+.flower4 { top: 110px; left: 10px; transform: rotate(-20deg) scale(0.9); }
+.flower5 { top: 110px; right: 10px; transform: rotate(20deg) scale(0.9); }
+
+/* LEAVES */
+.leaf {
+  position: absolute;
+  width: 120px;
+  height: 70px;
+  background: linear-gradient(to right, #2ecc71, #1e9f55);
+  border-radius: 80px;
+  opacity: 0.9;
+  z-index: 6;
+  box-shadow: 0px 10px 18px rgba(0,0,0,0.2);
+}
+
+.leaf1 {
+  bottom: 150px;
+  left: 80px;
+  transform: rotate(-25deg);
+}
+
+.leaf2 {
+  bottom: 150px;
+  right: 80px;
+  transform: rotate(25deg);
+}
+
+.leaf3 {
+  bottom: 170px;
+  left: 50%;
+  transform: translateX(-50%) rotate(0deg);
+  width: 140px;
+  height: 80px;
+}
+
+/* RIBBON */
+.ribbon {
+  position: absolute;
+  bottom: 65px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 80px;
+  z-index: 12;
+}
+
+.ribbon-knot {
+  position: absolute;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 55px;
+  background: linear-gradient(135deg, #ff3b86, #ff79b2);
+  border-radius: 20px;
+  box-shadow: 0px 10px 20px rgba(0,0,0,0.25);
+}
+
+.ribbon-left {
+  position: absolute;
+  left: 15px;
+  top: 30px;
+  width: 80px;
+  height: 55px;
+  background: linear-gradient(135deg, #ff3b86, #ff79b2);
+  border-radius: 50px;
+  transform: rotate(-15deg);
+  box-shadow: 0px 10px 20px rgba(0,0,0,0.25);
+}
+
+.ribbon-right {
+  position: absolute;
+  right: 15px;
+  top: 30px;
+  width: 80px;
+  height: 55px;
+  background: linear-gradient(135deg, #ff3b86, #ff79b2);
+  border-radius: 50px;
+  transform: rotate(15deg);
+  box-shadow: 0px 10px 20px rgba(0,0,0,0.25);
+}
+
+/* TEXT */
+.love-text {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #ff3b86;
+  font-weight: bold;
+  text-shadow: 0px 4px 12px rgba(255, 80, 150, 0.3);
+}
